@@ -66,6 +66,17 @@
   opacity: 0.85;
 }
 
+.shop-now-btn {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.4rem;
+  background: #fff;
+  color: var(--brown-dark);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 
 .shop-layout {
   display: flex;

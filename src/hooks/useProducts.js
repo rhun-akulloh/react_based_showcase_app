@@ -9,7 +9,11 @@ export default function useProducts() {
   useEffect(() => {
     fetch(API)
       .then(r => r.json())
-      .then(data => { setProducts(data); setLoading(false) })
+      .then(data => {
+        // console.log(data)
+        setProducts(data)
+        setLoading(false)
+      })
   }, [])
 
   function addProduct(product) {

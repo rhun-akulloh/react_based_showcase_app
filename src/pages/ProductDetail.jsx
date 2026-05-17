@@ -6,7 +6,7 @@ export default function ProductDetail() {
   const { id } = useParams()
   const navigate = useNavigate()
   const { products, loading, updateProduct, deleteProduct } = useProductContext()
-  const product = products.find(p => p.id === parseInt(id))
+  const product = products.find(p => String(p.id) === id) // json-server returns ids as strings
 
   const [editing, setEditing] = useState(false)
   const [price, setPrice] = useState('')

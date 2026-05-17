@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useProductContext } from '../context/ProductContext'
 import ProductCard from '../components/ProductCard'
 
@@ -7,6 +7,11 @@ export default function Shop() {
   const [search, setSearch] = useState('')
   const [selectedOrigins, setSelectedOrigins] = useState([])
   const searchRef = useRef(null)
+
+  // auto focus the search bar when the page loads
+  useEffect(() => {
+    searchRef.current.focus()
+  }, [])
 
   const origins = [...new Set(products.map(p => p.origin))]
 
